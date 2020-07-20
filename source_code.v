@@ -16,4 +16,13 @@ module rca_pipe_2bit(a,b,cin,clk,sum,cout);
 
   assign {cout,sum} = OR;	//assigning content of output reg to our outputs
 
+  always @(posedge clk) begin
+  	//mapping our inputs to bits of input registers so that we can easily use them i.e {a,b,c} -> input reg
+    ir[0] <= cin;
+    ir[1] <= a[0];ir[3] <= a[1];ir[5] <= a[2];ir[7] <= a[3];ir[9] <= a[4];ir[11] <= a[5];ir[13] <= a[6];ir[15] <= a[7];
+    ir[2] <= b[0];ir[4] <= b[1];ir[6] <= b[2];ir[8] <= b[3];ir[10] <=b[4];ir[12] <= b[5];ir[14] <= b[6];ir[16] <= b[7];
+
+  end
+
+
  endmodule
