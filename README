@@ -1,2 +1,3 @@
 Implementing a pipelined version of 8 bit RCA in order to speed it up.
 
+Adding test bench for the pipelined_8bit_adder module
