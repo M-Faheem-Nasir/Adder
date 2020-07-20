@@ -14,5 +14,6 @@ module rca_pipe_2bit(a,b,cin,clk,sum,cout);
   reg [9:0]  pr7;		//pipeline reg 7 for stage 7
   reg [8:0]  OR;		//output reg to store output of last stage
 
+  assign {cout,sum} = OR;	//assigning content of output reg to our outputs
 
  endmodule
